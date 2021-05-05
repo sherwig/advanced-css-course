@@ -44,20 +44,31 @@ body {
   height: 35px;
 }
 
-.text-box {}
+.text-box {
+  /* how to center a box */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .heading-primary {
-  /* position: absolute; */
   color: #fff;
   text-transform: uppercase;
+  /* fixes little shake on animation */
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
   /* to stack on top of eachother */
   display: block;
-  font=size: 60px;
+  font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* animation-iteration-count: 3; */
 }
 
 .heading-primary-sub {
@@ -65,4 +76,43 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+
+  /* start */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  /* finish */
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  /* finish */
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
