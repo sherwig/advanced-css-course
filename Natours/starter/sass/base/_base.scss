@@ -1,0 +1,18 @@
+/* Basic reset to make browsers render it the same */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // this defines what 1 rem is
+  font-size: 62.5%;
+}
+
+body {
+  /* won't add padding and margins to total height and width of a box */
+  box-sizing: border-box;
+}
