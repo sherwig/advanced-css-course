@@ -1,0 +1,34 @@
+.card {
+  //Helps with animation of flipping a card
+  perspective: 150rem;
+  -moz-perspectiv: 150rem;
+  position: relative;
+
+  &__side {
+    background-color: orangered;
+    height: 50rem;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--front {
+      background-color: blue;
+      // height: 50rem;
+    }
+
+    &--back {
+      background-color: green;
+      // height: 50rem;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
