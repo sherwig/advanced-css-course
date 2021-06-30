@@ -48,38 +48,3 @@
     width: calc(3 *((100% - 3 * #{$gutter-horizontal})/4) + 2 * #{$gutter-horizontal});
   }
 }
-
-// .wrapper {
-//   max-width: $grid-width;
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   grid-auto-rows: 100%;
-//   height: 300px;
-//
-//   &:not(:last-child) {
-//     background-color: blue;
-//   }
-//
-//   .box1 {
-//     grid-column-start: 1;
-//     grid-column-end: 4;
-//     grid-row-start: 1;
-//     grid-row-end: 2;
-//     background-color: orangered;
-//   }
-//
-//   .box2 {
-//     grid-column-start: 1;
-//     grid-row-start: 3;
-//     grid-row-end: 5;
-//     background-color: blue;
-//   }
-//
-//   .box3 {
-//     grid-column-start: 1;
-//     grid-row-start: 3;
-//     grid-row-end: 5;
-//     background-color: blue;
-//   }
-//
-// }

@@ -6,6 +6,7 @@
   /* keeps the top of the image to stay at the top */
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   // Copies the top selctor so .header
